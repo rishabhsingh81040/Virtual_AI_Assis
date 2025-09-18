@@ -55,7 +55,7 @@ function Customize2(){
         <div className="w-full min-h-[100vh] h-full relative bg-gradient-to-t from-[black] to-[#030353] flex justify-center items-center flex-col p-[20px]">
             <IoArrowBackSharp className="absolute top-[30px] left-[30px] text-white cursor-pointer w-[25px] h-[25px]" onClick={()=>navigate("/customize")}/>            
             <h1 className="text-white  mb-[40px] text-[30px] text-center  mt-[20px]">Enter Your <span className="text-blue-200">Assistant Name</span></h1>
-            <input type="text" placeholder='eg : Alaxia' className='w-full max-w-[600px] h-[60px] outline-none border-2 border-white bg-transparent text-white placeholder-gray-300 px-[20px] py-[10px] rounded-full text-[18px]'required onChange={(e)=>setAssistantName(e.target.value)} value={assistantName}/>
+            <input type="text" placeholder='eg : Javis' className='w-full max-w-[600px] h-[60px] outline-none border-2 border-white bg-transparent text-white placeholder-gray-300 px-[20px] py-[10px] rounded-full text-[18px]'required onChange={(e)=>setAssistantName(e.target.value)} value={assistantName}/>
             {assistantName && (<button className=' min-w-[300px] h-[60px] m-[20px] bg-white rounded-full text-black font-semibold text-[19px] cursor-pointer hover:shadow-2xl hover:shadow-blue-800 hover:border-1 hover:border-#202353' disabled={loading} onClick={()=>
                 handleUpdateAssistant()
                 }>{!loading?"Create Your Assistant Name":"Loading..."}</button>)}

@@ -53,7 +53,6 @@ function Home(){
 
         try {
             recognitionRef.current.start();
-            console.log("Recognition started");
         } catch (error) {
             if (error.name !== 'InvalidStateError') {
                 console.error('Recognition start error:', error);
@@ -213,9 +212,9 @@ function Home(){
                 const location = encodeURIComponent(userInput);
                 window.open(`https://www.google.com/maps/search/?api=1&query=${location}`, '_blank');
                 break;
-            case 'translation':
+            /*case 'translation':
                 window.open(`https://translate.google.com/?text=${encodeURIComponent(userInput)}`, '_blank');
-                break;
+                break;*/
             case 'send_email':
                 window.open(`mailto:?subject=&body=${encodeURIComponent(userInput)}`, '_blank');
                 break;
@@ -264,7 +263,6 @@ function Home(){
         shouldRestartRef.current = true;
 
         recognition.onstart = () => {
-            console.log('Recognition started');
             isRecognizingRef.current = true;
             setListening(true);
         }
@@ -301,7 +299,6 @@ function Home(){
         };
 
         recognition.onend = () => {
-            console.log('Recognition ended');
             isRecognizingRef.current = false;
             setListening(false);
 
@@ -444,7 +441,7 @@ function Home(){
                 onClick={handleManualSpeak}
                 disabled={isAssistantSpeaking}
             >
-                {isAssistantSpeaking ? 'Speaking...' : 'Make Assistant Speak'}
+                {isAssistantSpeaking ? 'Speaking...' : 'Assistant Speak'}
             </button>
         </div>
     )

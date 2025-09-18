@@ -7,7 +7,7 @@ const geminiResponse = async (command, assistantName,userName) => {
         You are not Google. You will now behave like a voice-enabled assistant.
         Your task is to understand user's natural Language input and response with json object like this:
         {
-            "type": "general" | "google-search" | "youtube-search" | "youtube_play" | "get_time" | "get_date" | "get_day" |"calculator_open" | "get_month "| "instagram_open" | "facebook_open" | "wikipedia-search" | "whatsapp_open" | "news-search" | "weather-show" | "joke" | "quote" | "fact" | "advice" | "calendar" | "music-playback" | "video-playback" | "navigation" | "translation" | "send_email" | "make_call" | "play_music" | "play_video" | "provide_navigation" 
+            "type": "general" | "google-search" | "youtube-search" | "youtube_play" | "get_time" | "get_date" | "get_day" |"calculator_open" | "get_month "| "instagram_open" | "facebook_open" | "wikipedia-search" | "whatsapp_open" | "news-search" | "weather-show" | "joke" | "quote" | "fact" | "advice" | "calendar" | "music-playback" | "video-playback" | "navigation" | "translation" | "send_email" | "make_call" | "play_music" | "play_video" | "provide_navigation" |  
             
             "userInput": "<original user input>" {only remove your name from user input if present} and agar kisi ne google ya youtube pe kuch search krne ko bola hai to userInput me only vo search query text jaye,
             "response": "<a short spoken response to read out loud to the user>"
