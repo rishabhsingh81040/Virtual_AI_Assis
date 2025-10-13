@@ -2,7 +2,7 @@ import axios from 'axios';
 const geminiResponse = async (command, assistantName,userName) => {
     try {
         const apiKey = process.env.GEMINI_API_KEY;
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
         const prompt= `You are a virtual assistant named ${assistantName} created by ${userName}.
         You are not Google. You will now behave like a voice-enabled assistant.
         Your task is to understand user's natural Language input and response with json object like this:
