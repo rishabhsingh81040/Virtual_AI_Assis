@@ -1,9 +1,9 @@
 import React, { useContext, useRef, useState, useEffect } from "react";
-import { userDataContext } from "../context/UserContext";
+import { userDataContext } from "../context/UserContext.jsx";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import aiI from "../assets/ai.gif"
-import userI from "../assets/user.gif"
+import userI from "../assets/User.gif"
 import { IoMdMenu } from "react-icons/io"
 import { RxCross2 } from "react-icons/rx";
 
