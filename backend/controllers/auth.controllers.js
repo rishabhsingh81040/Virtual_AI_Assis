@@ -8,7 +8,7 @@ export const signUp=async(req,res) =>{
         const existEmail=await User.findOne({email})
         if (existEmail){
             return res.status(400).json({message:"email already exists!"})
-
+ 
         }
         if(password.length<6){
             return res.status(400).json({message:"password must be atleast 6 characters !"})
